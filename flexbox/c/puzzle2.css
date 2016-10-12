@@ -1,0 +1,21 @@
+* {box-sizing: border-box;}
+ol[class^="puzzle"] li {list-style: none;}
+ol[class^="puzzle"] li::before {content: attr(class); font: 2vmin sans-serif;
+	color: rgba(128,0,0,0.5); text-shadow: 0 0 1px white,  0 0 2px white,  0 0 3px white,  0 0 4px white,  0 0 5px white;}
+
+ol[class^="puzzle"] {width: 60vmin; height: 20vmin; box-sizing: content-box;
+	margin: 0; padding: 1px; background: rgba(255,128,0,0.25);}
+ol[class^="puzzle"] li {border: 1px dotted red; list-style: none;
+	background-image: url(tarsier.png);
+	background-size: 60vmin 60vmin;}
+li[class$="01"] {background-position: 0% 0%; width: 10vmin;}
+li[class$="02"] {background-position: 50% 0%; width: 15vmin;}
+li[class$="03"] {background-position: 100% 0%; width: 20vmin;}
+
+li[class$="04"] {background-position: 0% 50%; width: 10%;}
+li[class$="05"] {background-position: 50% 50%; width: 15%;}
+li[class$="06"] {background-position: 100% 50%; width: 20%;}
+
+li[class$="07"] {background-position: 0% 100%; width: 50%;}
+li[class$="08"] {background-position: 50% 100%; width: 33%;}
+li[class$="09"] {background-position: 100% 100%; width: 40%;}
