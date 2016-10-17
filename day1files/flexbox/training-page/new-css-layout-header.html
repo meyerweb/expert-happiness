@@ -21,15 +21,13 @@
 */
 @import url(norm-layout-160607-header.css);
 a.sa {position: static;}
-.topics:after {background: none;}
+
+.scrollable {display: flex; justify-content: space-between;}
+.scrollable h3 {flex: 0 0.1; flex-basis: 12rem;}
+.scrollable .topics-list {flex: 1 1;}
+.scrollable a.sa {flex: 0 0; width: 8em; flex-basis: 8em; text-align: right;}
+.topics .topics-list {display: flex; justify-content: space-between;}
 .topics .topics-list li {list-style: none; position: relative;}
-
-
-ul {display: flex; justify-content: space-between; flex-direction: row; flex-wrap: wrap;}
-
-ul, .scrollable {display: flex; justify-content: center; flex-direction: row; flex-wrap: wrap;}
-li {margin-left: 10px;}
-.topic-list {width: 75%;}
 
 </style>
 

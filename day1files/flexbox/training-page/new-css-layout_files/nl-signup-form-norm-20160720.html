@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- v8.3 -->
+<html class="wf-guardiantextoreilly-n4-inactive wf-guardiantextoreilly-n7-inactive wf-oreillyurwtypewriternarro-n2-inactive wf-oreillyurwtypewriternarro-n3-inactive wf-inactive" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Email Signup Form</title>
+<style>
+input { -webkit-appearance: none; -webkit-border-radius:0; border-radius:0; }
+body { background-color: transparent; margin: 0; padding: 0; }
+body, form input, button, .thanks_message { font: 100%/1.8rem 'guardian-text-oreilly',open-sans,Helvetica,Arial,sans-serif; color: #999; }
+form { padding-right:130px; margin: 0; position: relative; padding-right:80px; }
+form input.email_address { height: 43px; width:100%; -moz-box-sizing:border-box; box-sizing:border-box; border: 1px solid #ddd; border-right:0; background-color: #fff; font-size: 10px; font-size: 1rem; padding: 0 0 0 10px; margin:0 -3px 0 0; vertical-align: top; } 
+form input.defaultText { color:#999; }
+a { text-decoration:none; color:#008fbf; }
+button { position: absolute; top: 0; right: 0; width: 80px; height: 43px; border: 0; background: rgb(254,196,26); padding: 0; color: #222; font-size: 10px; font-size: 1rem; opacity:.95; }
+button:hover { cursor:pointer; opacity:1; }
+.thanks_message { text-align: center; font-size: 12px; font-size: 1.2rem; margin: 8px auto; overflow: hidden; }
+.instruction { text-align: left; font-size: 10px; font-size: 1rem; margin: 4px auto; color:#404040; overflow: hidden; }
+.light {color: #fff;}
+</style>
+
+<!-- SiteCatalyst code version: H.20.3. Copyright 1997-2009 Omniture, Inc. More info available at http://www.omniture.com -->
+<script src="nl-signup-form-norm-20160720_data_002/gap0qyx.html" async=""></script><script language="JavaScript" type="text/javascript">
+var s_account="orglobal" // change report suite ID accordingly
+</script>
+<script language="JavaScript" type="text/javascript" src="nl-signup-form-norm-20160720_data_002/s_code.js"></script>
+<!-- load typekit fonts -->
+<script>
+(function(d) {
+  var config = {
+    kitId: 'gap0qyx',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//fonts.oreillystatic.com/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+</script>
+<!-- end load typekit fonts --><style type="text/css">.tk-oreilly-urw-typewriter-narro{font-family:"oreilly-urw-typewriter-narro",sans-serif;}.tk-guardian-text-oreilly{font-family:"guardian-text-oreilly",sans-serif;}</style><link rel="stylesheet" href="gap0qyx-l.html" media="all">
+
+</head>
+
+<body>
+<div id="signup">
+
+  <!--[if IE 9]> <div class="instruction light">Enter your email address</div> <![endif]-->
+  <!--[if lte IE 8]> <div class="instruction">Enter your email address</div> <![endif]-->
+
+  <form action="https://conduit.ipost.com/forms.cgi" method="post" id="newsletter-subscribe">
+    <input name="debug" value="0" type="hidden"> 
+    <input name="client_token" value="oreilly" type="hidden">
+    <input name="success_url" value="http://cdn.oreillystatic.com/oreilly/email/forms/nl-signup-form-norm-20160524.html?success=true&amp;v=6&amp;site=orm&amp;loc=live-training-popup&amp;emtype=nl&amp;topic=web" id="success_url" type="hidden">
+    <input name="error_url" value="http://cdn.oreillystatic.com/oreilly/email/forms/nl-signup-form-norm-20160524.html?success=false&amp;v=6&amp;site=orm&amp;loc=live-training-popup&amp;emtype=nl&amp;topic=web" id="error_url" type="hidden">
+    <input name="redirect_gfh_errors" value="yes" type="hidden"><!-- redirect without including error details from iPost-->
+
+    <input name="subscribe" value="optin" type="hidden">
+    <input name="nl_web" value="1" class="elist" id="news_list" type="hidden">
+    <input name="" value="1" class="elist" id="conf_list" type="hidden">
+    <input name="source" value="orm_live-training-popup" id="source" type="hidden">
+    <input name="email_addr" class="email_address defaultText" maxlength="100" placeholder="Email Address" aria-label="Email Address" id="email_addr" type="email">
+    <button type="Submit" id="join-btn" name="submit" value="Submit" aria-label="Join">Join</button>
+  </form>
+
+</div>
+
+<script type="text/javascript">
+
+//text_color, link_color, conference, location
+function EmailForm(myObject){
+  this.site = myObject.site;
+  this.loc = myObject.loc;
+  this.emtype = myObject.emtype;
+  this.topic = myObject.topic;
+}
+
+EmailForm.prototype.addInputNames = function (){
+  var newsListField = document.getElementById('news_list');
+  var confListField = document.getElementById('conf_list');
+  var listName = this.topic;
+
+  switch (listName) {
+    case 'prog':
+      newsListField.name = "nl_prog";
+      break;
+
+    case 'data':
+      newsListField.name = "nl_data";
+      break;
+
+    case 'webops':
+      newsListField.name = "nl_webops_perf";
+      break;
+
+    case 'web':
+      newsListField.name = "nl_web";
+      break;
+
+    case 'iot':
+      newsListField.name = "nl_iot";
+      break;
+
+    case 'design':
+      newsListField.name = "nl_design";
+      break;
+
+    case '4sl':
+      newsListField.name = "nl_4sl";
+      break;
+
+    case 'economy':
+      newsListField.name = "nl_economy";
+      break;
+
+    case 'fintech':
+      newsListField.name = "nl_money";
+      break;
+
+    case 'money':
+      newsListField.name = "nl_money";
+      break;
+
+    case 'security':
+      confListField.name = "nl_security";
+      break;
+
+    case 'sparkcamp':
+      confListField.name = "con_strata";
+      break;
+
+    default:
+      break;
+  }
+};
+
+
+EmailForm.prototype.addSource = function(){
+  var efSource = document.getElementById('source');
+  efSource.value = this.site + '_' + this.loc;
+};
+
+EmailForm.prototype.addClickTracking = function(){
+  var efSite = this.site, efTopic = this.topic, efLoc = this.loc, efEtype = this.emtype;
+
+  document.getElementById('join-btn').onclick = function() {
+    var s=s_gi(s_account);
+    s.eVar23= efSite + '-' + efTopic + '-' + efLoc + '-' + efEtype;
+    s.eVar39=efTopic;
+    s.events='event5,event68';
+    s.linkTrackVars='eVar23,eVar39,events';
+    s.linkTrackEvents='event5,event68';
+    s.tl(this,'o','Subscription');
+  }
+}
+
+// var checkValue = function(fieldValue){
+//   var emailField = document.getElementById('email_addr');
+//   emailField.className = 'email_address';
+//   if (fieldValue.placeholder === fieldValue.defaultValue || fieldValue.placeholder === 'Error. Please re-enter.') {
+//     emailField.className += ' defaultText';
+//     emailField.value = '';
+//   } else if (fieldValue.value === ''){
+//     emailField.value = fieldValue.defaultValue;
+//     emailField.className += ' defaultText';
+//   } 
+// };
+
+var getUrlVars = function(){
+  var vars = { };
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    vars[key] = value;
+  });
+  return vars;   
+};
+
+var settings = getUrlVars();
+
+var emailCollector = new EmailForm(settings);
+emailCollector.addInputNames();
+emailCollector.addSource();
+emailCollector.addClickTracking();
+
+
+//add the correct url for the success and error urls
+var success_url_params = '&site=' + settings.site + '&loc=' + settings.loc + '&emtype=' + settings.emtype + '&topic=' + settings.topic;
+document.getElementById('success_url').value += success_url_params;
+document.getElementById('error_url').value += success_url_params;
+
+if (settings.success != 'undefined') {//append proper language for error-checking  
+  //return message
+  if (settings.success === 'true') {
+    //hide form
+    document.getElementById('newsletter-subscribe').style.display='none';
+    document.write('<p class="thanks_message">Thanks for signing up.</p>');
+  } else if (settings.success === 'false') {
+    document.getElementById('email_addr').placeholder = 'Error. Please re-enter.';
+  }
+}//if (status != 'undefined')
+
+</script>
+
+
+</body></html>

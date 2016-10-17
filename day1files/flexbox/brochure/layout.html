@@ -54,15 +54,10 @@ div.content aside {padding: 0.5em 2em; background: #0002;}
 	#trainer {background-position: 50% 33%;}
 }
 
+
 @supports (display: flex) {
-	div.decoration {display: flex;
-		flex-direction: column;
-		flex-grow: 0;
-		flex-shrink: 0;
-		justify-content: space-between;}
-	div.decoration figure {
-		height: 50%;
-		flex: 1 1 auto;}
+	div.decoration {display: flex; flex-direction: column; flex-grow: 0; flex-shrink: 0; justify-content: space-between;}
+	div.decoration figure {height: 50%; flex: 1 1 auto;}
 	#trainer {flex-direction: column; justify-content: space-between; margin: 0;}
 	#trainer h2 {margin-bottom: 0;}
 	#coc {display: flex; flex-direction: column; justify-content: center;}
@@ -89,6 +84,7 @@ div.content aside {padding: 0.5em 2em; background: #0002;}
 		div.decoration figure {width: 50%; height: 100%;}
 		section.first div.decoration {order: 0;}
 	}
+
 }
 
 @media screen and (max-width: 25em) {
