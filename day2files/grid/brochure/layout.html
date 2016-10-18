@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brochure</title>
+
+<style type="text/css">
+
+* {box-sizing: border-box;}
+body {font: 1.25em/1.33 sans-serif; background: #F0EFE9;
+	margin: 0; padding: 0;}
+
+header {background: #D12761 url(img/olt-hero-new-css-layout-971x273.jpg) 50% 25% / cover no-repeat;}
+#where {background: #773E0788 url(img/map.png) 50% 50% / cover no-repeat;}
+#coc {background: #773E0788;}
+#trainer {background: silver url(img/eric-meyer.jpg) 50% 0% / cover no-repeat;}
+
+header {height: 60vh; max-height: 60vw; position: relative; margin-bottom: 10vh;}
+header .main-logo img {position: absolute; top: 2vh; right: 1vw; height: 3.5vmax; max-width: 40%;}
+header h1 {position: absolute; bottom: 1.5vh; left: 2vw; margin: 0; width: 66.67%;
+	font: bold 8vmin sans-serif; line-height: 0.9; text-transform: uppercase;
+	color: white; text-shadow: 0 0 3px black, 0 0 2px black, 0 0 1px black;}
+header h1 b {font-size: 2em; line-height: 0.8; display: block;}
+
+div.decoration {position: relative; float: right; width: 18em; margin: 0 0 1em 1em;}
+div.decoration figure {position: relative; margin: 1px; padding: 0;}
+
+section {margin-bottom: 5vh;}
+section p {margin: 0.5em 0 1em;}
+span.leadin {text-transform: uppercase;}
+section div.content > p:first-child {font-size: 110%;}
+div.content {width: 60%; margin: 0 auto;}
+div.content aside {padding: 0.5em 2em; background: #0002;}
+
+#trainer h2 {padding: 0.33em 1em; margin: 0 0 40vh;
+	text-align: center; font-size: 110%; color: #FFF; background: #0008;}
+#bio {font-size: smaller; line-height: 1.125; padding: 1em; margin: 0;
+	color: #FFF; background: #000A;}
+#bio a[href] {color: rgba(128,128,255,0.9);}
+#bio a[href]:visited {color: rgba(216,128,216,1);}
+
+#where {height: 50vh;}
+#where p {position: absolute; top: 0; left: 0; right: 0; padding: 1em; margin: 0;
+	background: #FFFD; text-align: center;}
+#where p > * {display: block;}
+#where p time {font-weight: bold; font-size: 125%;}
+#coc {padding: 1em; font-size: 90%;}
+
+
+@media screen and (max-width: 55em) {
+	div.decoration {float: none;}
+	div.decoration figure {display: inline-block; width: 100%; margin: 0;}
+	#trainer {background-position: 50% 33%;}
+}
+
+
+@supports (display: grid) {
+	section {display: grid; grid-template-columns: 25% 50% 25%;}
+	section.first div.content {grid-column: 1/span 2; grid-row: 1;
+		margin: 0 2em 0 10%; width: auto;}
+	section.first div.decoration {grid-column: 3/4; grid-row: 1;
+		margin: 0; width: auto; height: 100%;
+		display: grid; grid-template-rows: min-content 1fr min-content;}
+	#trainer h2 {margin-bottom: 0;}
+	#trainer #bio {grid-row: -2;}
+	section.second div.content {grid-column: 2/span 2; grid-row: 1; margin: 0 0 0 2em; width: auto;}
+	section.second div.decoration {grid-column: 1; grid-row: 1; margin: 0; width: auto; background: silver;
+		display: grid; grid-template-rows: 1fr 1fr;}
+	section.second #where {grid-area: 1/1/2/2; height: auto;}
+	section.second #coc {display: flex; flex-direction: column; justify-content: center;}
+}
+
+
+@media screen and (max-width: 55em) {
+	header {margin-bottom: 0;}
+	div.decoration {position: relative; width: 100%; margin: 0 0 1em;}
+	figcaption {font-size: 70%;}
+	section.first div.content, section div.content {width: 80%; margin: 0 10%;}
+
+	@supports (display: grid) {
+	}
+
+}
+
+@media screen and (max-width: 25em) {
+	div.content {width: 90%; margin: 0 5%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="http://oreilly.com/" class="main-logo"><img src="img/oreilly-logo-norm.svg"></a>
+<h1><b>New</b> CSS Layout</h1>
+</header>
+
+<section class="first">
+
+<div class="decoration" id="trainer">
+<h2>
+Your Instructor
+</h2>
+<p id="bio"><strong>Eric A. Meyer</strong> has been a burger flipper, a law publishing intern, a college webmaster, an early blogger, one of the original CSS Samurai, a member of the CSS Working Group, a consultant and trainer, and a Standards Evangelist for Netscape. Currently, he is technical lead at the 501(c)(3) non-profit <a href="http://rebeccasgift.org/" target="_blank">Rebecca’s Gift</a>, and co-founder of <a href="http://aneventapart.com/" target="_blank">An Event Apart</a> with Jeffrey Zeldman.</p>
+</div>
+
+<div class="content">
+
+<p>
+<span class="leadin">Despite its central role</span> in controlling presentation, CSS has lacked a proper layout system—until now. Flexible Box (flexbox) layout is now more widely supported than rounded corners, and Grid Layout is coming fast. Both embody entirely new layout behaviors, upending nearly all of what we’ve learned about how to structure content, arrange layout elements, and more.
+</p>
+<p>
+In this practical course, you’ll learn the basics of these new layout techniques through a mixture of instruction, hands-on experimentation, and small-group projects. By the end of the course, you should have a good handle on how and when to use flexbox and grids, and some practical experience in using them together as well as separately.
+</p>
+<p>
+This two-day workshop takes place at the O’Reilly Boston Training Center. You’ll have the personal attention (and hard-won wisdom) of a leading authority in CSS. The small class size will provide ample opportunity for discussion. The goal is to create a highly interactive, immersive exploration of the new and sometimes astonishing realities of CSS layout today.
+</p>
+
+<aside>
+<h3>What you’ll learn—and how you can apply it</h3>
+
+<p>By the end of this live, hands-on workshop, you’ll understand:</p>
+<ol>
+	<li>How to write CSS for layout purposes leaving behind floated layouts</li>
+	<li>How to use the properties and values of Flexible Box Layout</li>
+	<li>How to incorporate Grid Layout specifications</li>
+</ol>
+</aside>
+
+</div>
+
+</section>
+
+
+
+<section class="second">
+
+<div class="decoration">
+<figure id="where">
+<p>
+<time>October 17 & 18, 2016</time>
+<time>9:00am – 5:00pm EDT</time>
+<span>O’Reilly’s Boston Training Center, Boston, MA</span>
+</p>
+</figure><figure id="coc">
+<h3>Code of Conduct</h3>
+<p>All participants must follow our Code of Conduct, the core of which is this: an O’Reilly events should be a safe and productive environment for everyone. <a href="http://www.oreilly.com/conferences/code-of-conduct.html" target="_blank">Read more</a></p>
+<p><em>O’Reilly Media, Inc. assumes no responsibility or liability for the facilities or services provided by the vendors and suppliers. Anyone attending this conference releases O’Reilly from any and all claims that may arise out of attending at this conference.</em></p>
+</div>
+</figure>
+
+</div>
+
+<div class="content">
+
+
+<h3>This course is for you because…</h3>
+<p>You want to understand the new and far more powerful reality of CSS layout.</p>
+
+<h4>Prerequisites</h4>
+<p>Familiarity with HTML and CSS is necessary, although familiarity with traditional CSS layout is not.</p>
+
+<h4>Computer Requirements</h4>
+<p>A laptop with more than one modern browser, as well as a code editor of some sort, is highly recommended.  Working files will most likely be distributed via a public Github repository, but a Github account is not necessary.</p> 
+
+<h3>Course outline</h3>
+
+<h4>Day One</h4>
+<ul>
+	<li><h5>Understanding Flexible Boxes (flexbox)</h5>
+		<ul>
+			<li>Understanding the flow and alignment axes</li>
+			<li>Creating flexible boxes</li>
+			<li>Distributing boxes</li>
+			<li>Padding, borders, margins, and flexibility</li>
+			<li>Managing and constraining flexibility</li>
+			<li>Altering flexbox order (and why you usually shouldn’t)</li>
+			<li>Z-index and flexbox</li>
+			<li>Changing flex direction</li>
+			<li>Wrapping flexible boxes</li>
+		</ul>
+	</li>
+	<li><h5>Small-group projects</h5>
+	<p>The class will break up into small groups, with each group 	tackling a design task with flexbox. At the end of the time, the groups will come back together and present their solutions for analysis and discussion.</p></li>
+</ul>
+<h4>Day Two</h4>
+<ul>
+	<li><h5>Understanding Grid Layout</h5>
+		<ul>
+			<li>Basic grid terminology and principles</li>
+			<li>Differences and similarities between flexbox and grid</li>
+			<li>Defining grid lines</li>
+			<li>Constructing simple grids</li>
+			<li>Repeating grid patterns</li>
+			<li>Grid gutters</li>
+			<li>Understanding grid flow</li>
+			<li>Avoiding (or embracing) overlap</li>
+			<li>Keeping grids accessible</li>
+		</ul>
+	</li>
+	<li><h5>Small-group projects</h5>
+	<p>The class will break up into small groups, with each group tackling a design task with grid, flexbox, or both. As in day one, the groups will come back together and present their solutions for analysis and discussion.</p></li>
+</ul>
+
+
+</div>
+
+</section>
+
+
+
+
+</body>
+</html>
